@@ -1,0 +1,244 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #007bff; /* A vibrant blue for CTA buttons */
+    --secondary-color: #2c3e50; /* A dark navy/charcoal for background */
+    --accent-color: #4CAF50; /* A green for success/spark elements */
+    --text-color-light: #f4f4f4;
+    --text-color-dark: #333;
+    --font-family: 'Poppins', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: #ffffff; /* Default background */
+    color: var(--text-color-dark);
+}
+
+.section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+/* --- Typography --- */
+h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Header/Nav --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.nav-bar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.cta-nav {
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    padding: 100px 5% 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3.5rem;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+/* UPDATED STYLING HERE */
+.hero-image-placeholder {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    /* Removed background-color: #3f5569; */
+}
+
+.app-mockup {
+    width: 100%; /* Make the image fill its container */
+    height: 100%;
+    object-fit: contain; /* Ensures the image fits without being cut off */
+    border-radius: 10px;
+}
+/* END UPDATED STYLING */
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.cta-group {
+    margin-top: 30px;
+}
+
+/* --- Feature/Benefit Grid --- */
+.feature-grid, .benefit-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card, .benefit-card {
+    flex: 1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.benefits-section {
+    background-color: #f4f7f9;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.footer h2 {
+    color: white;
+    font-size: 2rem;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.btn-large:hover {
+    background-color: #3b9b3e;
+}
+
+.contact-info {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- Basic Responsiveness (for smaller screens) --- */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-image-placeholder {
+        width: 100%;
+        max-width: 350px;
+        height: 250px;
+    }
+
+    .feature-grid, .benefit-row {
+        flex-direction: column;
+    }
+}
